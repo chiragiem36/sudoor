@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>SUDOOR</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FREEHTML5.CO" />
+
+  	<!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FREEHTML5.CO
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- Google Webfonts -->
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Simple Line Icons-->
+	<link rel="stylesheet" href="css/simple-line-icons.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Salvattore -->
+	<link rel="stylesheet" href="css/salvattore.css">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<style>
+	body {
+  font-family: Arial, sans-serif;
+  background: url(http://www.shukatsu-note.com/wp-content/uploads/2014/12/computer-564136_1280.jpg) no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  font-family: Tahoma, Arial, sans-serif;
+  color: #06D85F;
+  margin: 80px 0;
+}
+
+	.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+    .popup{
+    width: 70%;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ 
+nav {
+  margin:2px;
+  text-align:center;
+}
+ 
+ul {
+  overflow: auto;
+  list-style-type: none;
+}
+ 
+li {
+  height: 25px;
+  float: left;
+  margin-right: 0;
+	border-right: 0px;
+  padding: 0 20px;
+}
+ 
+li:last-child {
+  border-right: none;
+}
+ 
+li a {
+  text-decoration: none;
+  color: #ccc;
+  font: 15px/1 Helvetica, Verdana, sans-serif;
+  text-transform: uppercase;
+ 
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+ 
+li a:hover {
+  color: #666;
+}
+
+li.active a {
+  font-weight: bold;
+  color: #333;
+}
+	*{margin: 0; padding: 0}
+		.btn_a {
+		width: auto;
+		height: auto;
+		margin: 0 auto;
+		text-align: center;
+		text-decoration: none;
+		border-radius: 16px;
+	}
+	.popup_wrapper, .overlay {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		overflow: hidden;
+	}
+	.popup_wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		visibility: hidden;
+		transition: opacity 500ms;
+		opacity: 0;
+	}
+	.overlay {
+		z-index: 0;
+		background: rgba(0, 0, 0, .618);
+	}
+	.show {
+		visibility: visible;
+		opacity: 1;
+	}
+	.popup {
+		position: relative;
+		z-index: 1;
+		flex: 0 1 auto;
+		overflow: hidden;
+		border-radius: 16px;
+		transition: all .02s ease-in-out;
+	}
+	.popup .close {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		font-weight: bolder;
+		text-decoration: none;
+	}
+	.close:hover {
+		color: #444;
+	}
+	.popup .title p {
+		padding-left: 12px;
+		text-align: left;
+		border-bottom: 1px solid #555;
+	}
+	.popup h1 {
+		margin: 16px auto;
+	}
+	.hide_sb {
+		height: 100%;
+		overflow: hidden;
+	}
+
+	</style>
+<!--popup style ends here-->
+	</head>
+
+
+	<body>
+	<div id="fh5co-offcanvass">
+		<div class="Column">
+		<ul style ="height: 350px;">
+			<li class="active" style="width: 126px;height: 30px;"><a href="#" data-nav-section="home">होम</a></li><br><br>
+			<li style="width: 200px;height: 30px;"><a href="#" data-nav-section="features">सुविधाएं एवं लाभ</a></li><br><br>
+			<li style="width: 126px;height: 30px;"><a href="#" data-nav-section="benefits">विशेषताएं</a></li><br><br>
+			<li style="width: 126px;height: 30px;"><a href="#" data-nav-section="counter">डाउनलोड</a></li><br><br>
+			<li style="width: 126px;height: 30px;"><a href="#" data-nav-section="pricing">ख़रीदें</a></li><br><br>
+		    <li style="width: 200px;height: 30px;"><a href="#" data-nav-section="faqs">FAQs</a></li>
+		</ul>
+		</div>
+		<h3 class="fh5co-lead">हमसे संपर्क </h3>
+		<p class="fh5co-social-icons">
+			<!--<a href="#"><i class="icon-twitter"></i></a> -->
+			<a href="https://www.facebook.com/SudoorAE/"><i class="icon-facebook"></i></a>
+			<!--<a href="#"><i class="icon-instagram"></i></a> -->
+			<!--<a href="#"><i class="icon-dribbble"></i></a> -->
+			<!-- <a href="#"><i class="icon-youtube"></i></a> -->
+		</p>
+	</div>
+		<div id="fh5co-menu" class="navbar">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#fh5co-navbar" aria-expanded="false" aria-controls="navbar"><span>Menu</span> <i></i></a>
+					<a href="index1.html" class="navbar-brand" style="color:#298A08;font-size: 25px;"><span style=" color:greenyellow">सुदूर</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-page">
+		<div id="fh5co-wrap">
+			<header id="fh5co-hero" data-section="home" role="banner" style="background: url(images/banner.jpg) top left; background-size: cover;" >
+				<div class="fh5co-overlay"></div>
+				<div class="fh5co-intro">
+					<div class="container">
+						<div class="row">
+							
+							<div class="col-md-6 fh5co-text">
+								<h2 class="to-animate intro-animate-1"> क्यों जाऐं दूर, </h2>
+								<h2 class="to-animate intro-animate-1">जब पास है <a style="color: greenyellow">सुदूर</a></h2>
+								<p class="to-animate intro-animate-2">सुदूर जी.एस.एम. आधारित एक रिमोट स्टार्टर कंट्रोलर है जिसके द्वारा आप अपनी मोटर को कहीं से, कभी भी चालू -बंद कर सकते हैं।</p>
+								<div id="wrapper">
+								<p class="to-animate intro-animate-3"><a href="#popup1" class="btn btn-primary btn-md"  style="font-size: 20px;"><b> अपना सुदूर अभी ऑर्डर करें </b></a></p></div>
+								</div>
+								<div id="popup1" class="overlay">
+	<div class="popup">
+	<a class="close" href="#">&times;</a>
+	<div class="content">
+	<form class="Form" role="form" data-posturl="" novalidate="" data-language="es">
+		<div class="vertical-registration-form mc-form-wrap">
+			<div class="colored-line"></div>
+			<h3><b> ORDER NOW </b></h3>			
+			<input name="NAME" class="form-control input-box" placeholder="Name" type="text"><br>
+			<!--<input name="LASTNAME" class="form-control input-box" placeholder="Surname" type="text"><br>-->
+			<input name="PHONE NO" class="form-control input-box" placeholder="PhoneNumber" type="text"><br>
+			<input name="Quantity" class="form-control input-box" placeholder="quantity" type="text"><br>
+			<input name="Address" class="form-control input-box" placeholder="Enter your Address" type="text"><br>	
+			<h6 class="subscription-success"></h6>
+			<h6 class="subscription-error"></h6>
+		  <input value="Order Now" class="btn standard-button" type="submit" onClick="parent.location='mailto:yatish.mhs@gmail.com?subject=mail for sudoor enquiry&cc=you2@youremail.com'">
+		</div>
+	</form>
+</div></div>
+	</div>
+							<div class="img" style=" margin-left:20px;margin-top:35px;">
+								<img src="images/sudoor1.png" alt="Outline Free HTML5 Responsive Bootstrap Template">
+							</div>
+
+						</div>
+					</div>						
+				</div>
+			</header>
+			<!-- END .header -->
+
+
+		<!--2nd navigation bar-->
+						<div id="fh5co-main">
+				<!-- fetures container-->
+				<div id="fetures">
+				<div id="fh5co-features" data-section="features">
+                      <div class="container">
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2 fh5co-section-heading text-center">
+								<h2 class="fh5co-lead to-animate"><b>सुविधाएं एवं लाभ</b></h2>
+								<!--<p class="fh5co-sub to-animate">सुदूर के साथ दूर से अपनी सिंचाई का नियंत्रण रखें, या सिर्फ ऑटो मोड में सुदुर को रखो और यह आपके लिए काम करेगा।</p>-->
+							</div>
+							<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+								<a class="fh5co-feature to-animate">
+									<span class="fh5co-feature-icon"><i class="icon-mustache"></i></span>
+									<h3 class="fh5co-feature-lead">100% नि: शुल्क संचालन</h3>
+									<p class="fh5co-feature-text">बिना किसी ख़र्च , केवल मिस कॉल से संचालित कर सकते हैं</p>
+								</a>
+							</div>
+							<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+								<a class="fh5co-feature to-animate">
+								<!-- <a href="#" class="fh5co-feature to-animate"> //This is the original code, href = "#" will create hyperlink// -->
+									<span class="fh5co-feature-icon"><i class="icon-screen-smartphone"></i></span>
+									<h3 class="fh5co-feature-lead">दूर से नियंत्रण</h3>
+									<p class="fh5co-feature-text">केवल अपने फोन से दुनियां मे कही से भी मोटर को नियंत्रित कर सकते है</p>
+								</a>
+							</div>
+							<div class="clearfix visible-sm-block"></div>
+							<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+								<a class="fh5co-feature to-animate">
+									<span class="fh5co-feature-icon"><i class="icon-eye"></i></span>
+									<h3 class="fh5co-feature-lead">आपके मोटर को सुरक्षित करें</h3>
+									<p class="fh5co-feature-text">खराब बिजली , फेज़ जाने  से होने वाले खतरों से पंप को सुरक्षित रखता है </p>
+								</a>
+							</div>
+							<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+								<a class="fh5co-feature to-animate">
+									<span class="fh5co-feature-icon"><i class="icon-energy"></i></span>
+									<h3 class="fh5co-feature-lead">उपयुक्त स्टार्टर</h3>
+									<p class="fh5co-feature-text">सभी MK1डेल्टा, स्टार डेल्टा व डीओएल स्टार्टर के लिए</p>
+								</a>
+							</div>
+
+							<!--<div class="clearfix visible-sm-block"></div>
+
+							<div class="fh5co-spacer fh5co-spacer-sm"></div>
+
+							<div class="col-md-4 col-md-offset-4 text-center to-animate">
+								<a id="myst" onclick="show();" class="btn btn-primary">सभी सुविधाएं देखें</a>
+								<script>
+									var showBtn = document.getElementById('myst');
+									showBtn.onclick = function() {
+								var showme = document.getElementById('mydiv');
+								if (showme.style.display !== 'block') {
+								showme.style.display = 'block';
+								}
+								else {
+								showme.style.display = 'none';
+								} };
+								</script>
+
+							</div>-->
+			        	</div>
+						  <div id="mydiv" class="row">
+							  <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+								  <a class="fh5co-feature to-animate">
+									  <span class="fh5co-feature-icon"><i class="icon-graph"></i></span>
+									  <h3 class="fh5co-feature-lead">निगरानी</h3>
+									  <p class="fh5co-feature-text">बिजली आने  तथा मोटर चालू होने की सूचना आपके मोबाइल पर</p>
+								  </a>
+							  </div>
+							  <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+								  <a class="fh5co-feature to-animate">
+									  <span class="fh5co-feature-icon"><i class="icon-anchor"></i></span>
+									  <h3 class="fh5co-feature-lead">रखरखाव तथा  उपयोग मे आसान</h3>
+									  <p class="fh5co-feature-text">सुदूर का उपयोग बहुत ही आसान है तथा रखरखाव का भी ख़र्च नहीं</p>
+								  </a>
+							  </div>
+							  <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+								  <a class="fh5co-feature to-animate">
+									  <span class="fh5co-feature-icon"><i class="icon-present"></i></span>
+									  <h3 class="fh5co-feature-lead"> समय तथा धन की बचत </h3>
+									  <p class="fh5co-feature-text">खेत पर आने - जाने मे लगने वाले समय तथा ईंधन की बचत</p>
+								  </a>
+							  </div>
+							  <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
+								  <a class="fh5co-feature to-animate">
+									  <span class="fh5co-feature-icon"><i class="icon-energy"></i></span>
+									  <h3 class="fh5co-feature-lead">सभी प्रकार की मोटर  पंप के लिए उपयुक्त</h3>
+									  <p class="fh5co-feature-text">सुदूर को सभी प्रकार की  ट्यूबवेल तथा कुएं  की मोटर के साथ उपयोग कर सकते हैं </p>
+								  </a>
+							  </div>
+						  </div>
+			       </div>
+			       </div>
+				   </div>
+				   
+				   <!--applications container -->
+				
+				<div id="fh5co-features-2" data-section="benefits">
+					<div class="fh5co-features-2-content">
+					    <div class="container">
+					    	<div class="row">
+					    		<div class="col-md-8 col-md-offset-2 fh5co-section-heading text-center">
+									<h2 class="fh5co-lead to-animate">विशेषताएं</h2>
+									<p class="fh5co-sub to-animate">सुदूर मे 2 मोड उपलब्ध है। यदि आप चाहें तो सुदूर को ऑटोमेटिक  मोड में रखें बिजली आने पर सुदूर स्वयं मोटर चालू कर आपको सूचित करता है या मेनुअल मोड मे रखे  और जब चाहें  स्वयं मोटर को चालू - बंद करें । दोनो मोड मे पंप चालू होने की सूचना सुदुर द्वारा आपको दी जाएगी</p>
+								</div>
+					    		<div class="col-md-4 fh5co-text-wrap">
+					    			<div class="row text-center">
+						    			<div class="col-md-12 col-sm-6 col-xs-6 col-xxs-12 fh5co-text animate-object features-2-animate-3">
+						    				<span class="fh5co-icon"><i class="icon-screen-desktop"></i></span>
+											<h4 class="fh5co-uppercase-sm">क्रॉस प्लेटफ़ॉर्म समर्थन</h4>
+											<p>सभी प्रकार के स्टार्टर्स का समर्थन करता है, ताकि आप अपने मौजूदा स्टार्टर  के साथ सुदूर का उपयोग कर सकें।</p>
+										</div>
+										<div class="col-md-12 col-sm-6 col-xs-6 col-xxs-12 fh5co-text animate-object features-2-animate-4">
+											<span class="fh5co-icon"><i class="icon-anchor"></i></span>
+											<h4 class="fh5co-uppercase-sm">1 वर्ष की वारंटी</h4>
+											<p>सुदूर बहुउद्देश्यीय उपयोग के लिए एक उपयुक्त उपकरण है तथा 1 वर्ष की रिप्लेसमेंट वारंटी के साथ उपलब्ध है ।</p>
+										</div>
+										
+									</div>
+					    		</div>
+					    		<div class="col-md-4 col-md-push-4 fh5co-text-wrap">
+					    			<div class="row text-center">
+						    			<div class="col-md-12 col-sm-6 col-xs-6 col-xxs-12 fh5co-text animate-object features-2-animate-5">
+						    				<span class="fh5co-icon"><i class="icon-rocket"></i></span>
+											<h4 class="fh5co-uppercase-sm">शक्तिशाली डिजाइन</h4>
+											<p>सूदूर को किसानो के उपयोग के लिए मजबूत बॉडी के साथ तैयार किया गया है ताकि  सुदूर के आंतरिक उपकरण आसानी से क्षतिग्रस्त न हो व टूट-फूट से सुरक्षित रहे।</p>
+										</div>
+										<div class="col-md-12 col-sm-6 col-xs-6 col-xxs-12 fh5co-text animate-object features-2-animate-6">
+											<span class="fh5co-icon"><i class="icon-people"></i></span>
+											<h4 class="fh5co-uppercase-sm">आसानी से नंबर रजिस्टर</h4>
+											<p>अब अपने मोबाइल नंबर को सुदूर  पर आसानी से रजिस्टर करें। सुदूर के साथ किसी भी ऑपरेटर की जीएसएम सिम कार्ड का उपयोग किया जा सकता है। </p>
+										</div>
+										
+									</div>
+					    		</div>
+					    		<div class="col-md-4 col-md-pull-4 fh5co-image animate-object features-2-animate-2">
+					    			<p class="text-center">
+					    			<img src="images/iphone_blank_2.png" class="" alt="Outline Free HTML5 Responsive Bootstrap Template">
+					    			</p>
+					    		</div>
+					    		
+					    	</div>
+					    </div>
+					</div>	
+                 </div>
+
+
+			    <!-- <div id="fh5co-testimony" data-section="testimonies">
+				    <div class="container">
+				    	<div class="row animate-box">
+
+							<div class="owl-carousel">
+
+								<div class="item">
+									<div class="col-md-3 col-sm-3 col-xs-4 col-xxs-12">
+						    			<figure class="fh5co-vcard"><img src="images/sanju.png" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive"></figure>
+						    		</div>
+						    		<div class="col-md-9 col-sm-9 col-xs-8 col-xxs-12">
+						    			<blockquote>
+						    				<p>&ldquo;Yeh product humne kisan bhaiyo ko dhyaan mai rakh kar banaya hai.&rdquo;</p>
+						    			</blockquote>
+						    			<p class="fh5co-author fh5co-uppercase-sm"><span>Sanju Kumar</span>, AE Inc.</p>
+						    		</div>
+						    	</div>
+
+						    	<div class="item">
+									<div class="col-md-3 col-sm-3 col-xs-4 col-xxs-12">
+						    			<figure class="fh5co-vcard"><img src="images/yatish.png" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive"></figure>
+						    		</div>
+						    		<div class="col-md-9 col-sm-9 col-xs-8 col-xxs-12">
+						    			<blockquote>
+						    				<p>&ldquo;Kisan is product ko bahut hi pasand karenge, yeh humara wada hai.&rdquo;</p>
+						    			</blockquote>
+						    			<p class="fh5co-author fh5co-uppercase-sm"><span>Yatish Khare</span>, AE Inc.</p>
+						    		</div>
+						    	</div>
+
+						    	<div class="item">
+									<div class="col-md-3 col-sm-3 col-xs-4 col-xxs-12">
+						    			<figure class="fh5co-vcard"><img src="images/ankit.png" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive"></figure>
+						    		</div>
+						    		<div class="col-md-9 col-sm-9 col-xs-8 col-xxs-12">
+						    			<blockquote>
+						    				<p>&ldquo;Humne yeh product banane mai bahutpurv yogdan diya hai, aur humne ek sudoor khareeda bhi hai. Jo humari paani ki tanki mai paani chadata hai.&rdquo;</p>
+						    			</blockquote>
+						    			<p class="fh5co-author fh5co-uppercase-sm"><span>Ankit Singh</span>, UIT-RGPV Intern.</p>
+						    		</div>
+						    	</div>
+
+
+						    </div>
+
+				    	</div>
+				    </div>
+			    </div> -->
+
+			    
+				 <div id="fh5co-counter" data-section="counter" class="fh5co-bg-section" style="background-image: url(images/bg_1.jpg); background-attachment: fixed;">
+					<div class="fh5co-overlay"></div>
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="fh5co-hero-wrap">
+									<h2 style="color:white">Downloads</h2>
+									<div class="fh5co-hero-intro text-center to-animate counter-animate">
+										<div class="col-md-4 text-center">
+											<div class="btn btn-default">Pamphlet</div>
+											
+										</div>
+										<div class="col-md-4 text-center">
+											<div class="btn btn-default">User Manual</div>
+										</div>
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				
+				<div class="fh5co-bg-section cta" id="fh5co-cta" style="background-image: url(images/hero_bg.jpg); background-attachment: fixed;">
+					<div class="fh5co-overlay"></div>
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="fh5co-hero-wrap">
+									<div class="fh5co-hero-intro text-center">
+										<div class="row">
+											<div class="col-md-8 col-md-offset-2 fh5co-section-heading text-center">
+												<h2 class="fh5co-lead to-animate">सुदूर का डेमो !</h2>
+												<p class="fh5co-sub to-animate">निम्न स्थानों पर सुदूर का डेमो देखें</p>
+												<!--<div class="to-animate"><a href="#" class="btn btn-primary">Get Started!</a></div>-->
+												<p class="fh5co-sub to-animate"><a href="https://goo.gl/maps/trem77anwVx" target="_blank">Advancia Electric Office: +91-8109307377</a></p>
+												<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1PoCb4Lf0MxU5wg1q0W5zIPf0Iuc" width="640" height="480"></iframe>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>					
+					</div>
+				</div>
+				
+				<div id="fh5co-pricing" data-section="pricing">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2 fh5co-section-heading text-center">
+								<h2 class="fh5co-lead animate-single pricing-animate-1">सुदुर पर भारी छूट</h2>
+								<p class="fh5co-sub animate-single pricing-animate-2"> डिस्काउंट की जानकारी  एवं सुदूर ऑर्डर करने  के लिए   +91-8989450788  पर हमसे संपर्क करें।</p>
+							</div>
+
+							<div class="col-md-3 to-animate">
+								<!-- <a href="#" class="fh5co-figure">
+									<span class="fh5co-price">₹4200<span>/piece</span></span>
+									<h3 class="fh5co-figure-lead">Individuals</h3>
+									<p class="fh5co-figure-text">Buy Sudoor online or find retailer near you</p>
+								</a> -->
+							</div>
+							<div class="col-md-3 to-animate">
+								<a href="#popup1" class="fh5co-figure active pricing-feature">
+									<span class="fh5co-price">₹4200<span> </span></span>
+									<h3 class="fh5co-figure-lead">विशेष छूट </h3>
+									<p class="fh5co-figure-text"> </p>
+								</a>
+							</div>
+							<div class="col-md-3 to-animate">
+								<a href="#popup1" class="fh5co-figure active pricing-feature">
+									<span class="fh5co-price">₹4500<span></span></span>
+									<h3 class="fh5co-figure-lead">MRP</h3>
+									<p class="fh5co-figure-text"></p>
+								</a>
+							</div>
+							<div class="col-md-3 to-animate">
+								<!-- <a href="#" class="fh5co-figure">
+									<span class="fh5co-price">Retailers<span>/month</span></span>
+									<h3 class="fh5co-figure-lead">Enterprise</h3>
+									<p class="fh5co-figure-text">Contact us at +91-8109307377</p>
+								</a> -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- ///////////////////////////////////
+				This section had FAQs
+				////////////////////////////////////////-->
+				
+				<div id="fh5co-faqs"  data-section="faqs">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2 fh5co-section-heading text-center">
+								<h2 class="fh5co-lead animate-single faqs-animate-1">सामान्य पूछे जाने वाले प्रश्न  </h2>
+								<!--<p class="fh5co-sub animate-single faqs-animate-2">Far far away, behind the word mountains, far from the countries Vokalia and</p>-->
+							</div>
+						</div>
+					</div>
+					
+
+					<div class="container">
+						<div class="faq-accordion active to-animate">
+							<span class="faq-accordion-icon-toggle active"><i class="icon-arrow-down"></i></span>
+							<h3>क्या सुदूर को उपयोग करने के लिए इंटरनेट की आवश्यकता है ?</h3>
+							<div class="faq-body" style="display: block;">
+								<p>नहीं , सुदूर के उपयोग के लिए सिम में नेटवर्क आना आवश्यक है ।</p>
+							</div>
+						</div>
+						<div class="faq-accordion to-animate">
+							<span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
+							<h3>मेरे पास 1 ट्यूब वेल और 2 कुएं वाली मोटर है क्या सभी के साथ सुदूर का उपयोग कर सकता हूँ ?</h3>
+							<div class="faq-body">
+								<p>जी हा, सुदूर 3 फेज वाली ओपन वेल और ट्यूब वेल मोटर के साथ किया जा सकता है ।</p>
+							</div>
+						</div>
+						<div class="faq-accordion to-animate">
+							<span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
+							<h3>मेरे 3 खेत है जिनपर 5-10-25 एच पी की मोटर लगी हुई है क्या सभी मोटर्स के लिए सुदूर का उपयोग कर सकते है ?</h3>
+							<div class="faq-body">
+								<p>सुदूर 1/2 एच पी से लेकर 50 एच पी  तक की किसी भी 3 फेज मोटर के  साथ उपयोग किया जा सकता है ।</p>
+							</div>
+						</div>
+						<div class="faq-accordion to-animate">
+							<span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
+							<h3>सुदूर के साथ कौन सी सिम उपयोग की जा सकती है ?</h3>
+							<div class="faq-body">
+								<p>आपके खेत पर जिस भी ऑपरेटर का नेटवर्क उपलब्ध हो जैसे आईडिया , एयरटेल , बीएसएनएल , टाटा इतयादि ।</p>
+							</div>
+						</div>
+						<div class="faq-accordion to-animate">
+							<span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
+							<h3>एक सुदूर को कितनी मोटर के साथ उपयोग किय़ा जा सकता है ?</h3>
+							<div class="faq-body">
+								<p>सुदूर एक समय में एक मोटर के साथ उपयोग किया जा सकता है ।</p>
+							</div>
+						</div>
+						<div class="faq-accordion to-animate">
+							<span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
+							<h3>मेरा खेत 6 किमी दूर है क्या मै सुदूर द्वारा मोटर ऑपरेट कर सकता हूँ ?</h3>
+							<div class="faq-body">
+								<p>जी हा, आप सुदूर द्वारा बहुत आसानी से दुनिया में कही से भी मोटर को ऑपरेट कर सकते है ।</p>
+							</div>
+						</div>
+						<div class="faq-accordion to-animate">
+							<span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
+							<h3>सुदूर द्वारा मोटर को बंद - चालू करने में कितना खर्च आता है ?</h3>
+							<div class="faq-body">
+								<p>सुदूर द्वारा आप बिना किसी खर्च के मोटर को बंद चालू कर सकते है पर कम से कम सिम में 10 रुपये का  बैलेंस अनिवार्य है ।</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="fh5co-subscribe">
+					<div class="container">
+						<div class="row animate-box">
+							<form action="#" method="post">
+								<div class="col-md-3 col-sm-3">
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="नाम">
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-3">
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="फोन नंबर">
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-3">
+									<div class="form-group">
+										<input type="email" class="form-control" placeholder="ईमेल">
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-3">
+									<div class="form-group">
+										<input type="submit" class="btn btn-primary" VALUE="संपर्क करें" onClick="parent.location='mailto:yatish.mhs@gmail.com?subject=mail for sudoor enquiry&cc=you2@youremail.com'">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+
+		<footer id="fh5co-footer" style="">
+			<div class="fh5co-overlay"></div>
+			<div class="fh5co-footer-content">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-4 col-md-push-3">
+							<h3 class="fh5co-lead">About</h3>
+							<ul>
+								<li><a href="http://advanciaelectric.com/">Company</a></li>
+								<!--<li><a href="#">Contact Us</a></li>-->
+							</ul>
+						</div>
+						<div class="col-md-3 col-sm-4 col-md-push-3">
+							<h3 class="fh5co-lead">Support</h3>
+							<ul>
+								<a id="aBtn" href="javascript: void(0);" class="btn_a">kisan Help Center</a>
+						<div id="popupBox" class="popup_wrapper">
+							<div class="overlay"></div>
+							<div class="popup">
+								<a class="close" href="javascript: void(0);">&times;</a>
+								<header class="title"><p>Kisan Help Line:</p></header>
+								<h1>+91-8989450788</h1>
+								<h1>07554083374</h1>
+								<p>24/7 service avalible.</p>
+							</div>
+						</div>
+
+								<br>
+								<a href="#">Service and Warranty</a>
+								<!-- <li><a href="#">Security</a></li> -->
+								<!--<br><a href="#">Fair use Policy</a>-->
+								<!--<li><a href="#">Careers</a></li> -->
+								<!-- <li><a href="#">More Apps</a></li> -->
+							</ul>
+						</div>
+						<div class="col-md-3 col-sm-4 col-md-push-3">
+							<h3 class="fh5co-lead">More Links</h3>
+							<ul>
+								<a href="#popup2">Feedback</a>
+							</ul>
+						</div>
+						<div id="popup2" class="overlay">
+							<div class="popup" style=" margin-top: 95px;">
+								<a class="close" href="#">&times;</a>
+								<div class="content">
+									<form class="Form" role="form" data-posturl="" novalidate="" data-language="es">
+										<div class="vertical-registration-form mc-form-wrap">
+											<div class="colored-line"></div>
+											<h3><b> FEEDBACK FORM </b></h3>
+											<input name="NAME" class="form-control input-box" placeholder="Name" type="text"><br>
+											<!--<input name="LASTNAME" class="form-control input-box" placeholder="Surname" type="text"><br>-->
+											<input name="PHONE NO" class="form-control input-box" placeholder="PhoneNumber" type="text"><br>
+											<!--<input name="Quantity" class="form-control input-box" placeholder="quantity" type="text"><br>-->
+											<input name="Address" class="form-control input-box" placeholder="Enter your Address" type="text"><br>
+											<input name="Feedback" class="form-control input-box" placeholder="Feedback" type="text"><br>
+											<h6 class="subscription-success"></h6>
+											<h6 class="subscription-error"></h6>
+											<input value="ENTER" class="btn standard-button" type="submit" onClick="parent.location='mailto:yatish.mhs@gmail.com?subject=mail for sudoor enquiry&cc=you2@youremail.com'">
+										</div>
+									</form>
+								</div></div>
+						</div>
+
+						<div class="col-md-3 col-sm-12 col-md-pull-9">
+							<div class="fh5co-footer-logo"><a href="index.html">SUDOOR</a></div>
+							<p class="fh5co-copyright"><small>&copy; 2017. All Rights Reserved. <br>	Sudoor is owned by <a href="http://advanciaelectric.com/" target="_blank">Advancia Electric  </a><br> <a href="https://freehtml5.co/" target="_blank">Webpage courtesey Freehtml5 </a></small> <p>
+							<p class="fh5co-social-icons">
+								<!-- <a href="#"><i class="icon-twitter"></i></a> -->
+								<a href="https://www.facebook.com/SudoorAE/"><i class="icon-facebook"></i></a>
+								<!-- <a href="#"><i class="icon-instagram"></i></a>
+								<a href="#"><i class="icon-dribbble"></i></a>
+								<a href="#"><i class="icon-youtube"></i></a> -->
+							</p>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<!-- Owl Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- toCount -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Main JS -->
+	<script src="js/main.js"></script>
+	<script>
+        $("#aBtn").click(function(){
+            console.log($(window).height());
+            $("#popupBox").height($(window).height());
+            $(".overlay").height($(window).height())
+            $("#popupBox").addClass("show");
+            $("body").addClass("hide_sb");
+        });
+        $(".overlay").click(function(){
+            $("#popupBox").removeClass("show");
+            $("body").removeClass("hide_sb")
+        });
+        $(".close").click(function(){
+            $("#popupBox").removeClass("show");
+            $("body").removeClass("hide_sb")
+        });
+	</script>>
+
+	
+
+	
+	</body>
+</html>
