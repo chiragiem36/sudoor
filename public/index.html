@@ -11,21 +11,6 @@
 	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
 	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
 	<meta name="author" content="FREEHTML5.CO" />
-
-  	<!-- 
-	//////////////////////////////////////////////////////
-
-	FREE HTML5 TEMPLATE 
-	DESIGNED & DEVELOPED by FREEHTML5.CO
-		
-	Website: 		http://freehtml5.co/
-	Email: 			info@freehtml5.co
-	Twitter: 		http://twitter.com/fh5co
-	Facebook: 		https://www.facebook.com/fh5co
-
-	//////////////////////////////////////////////////////
-	 -->
-
   	<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>
 	<meta property="og:image" content=""/>
@@ -36,14 +21,13 @@
 	<meta name="twitter:image" content="" />
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
-
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
+	<!--<link rel="shortcut icon" href="favicon.ico">-->
 
 	<!-- Google Webfonts -->
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-	
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -135,17 +119,17 @@ h1 {
   margin: 0;
   padding: 0;
 }
- 
+
 nav {
   margin:2px;
   text-align:center;
 }
- 
+
 ul {
   overflow: auto;
   list-style-type: none;
 }
- 
+
 li {
   height: 25px;
   float: left;
@@ -153,24 +137,24 @@ li {
 	border-right: 0px;
   padding: 0 20px;
 }
- 
+
 li:last-child {
   border-right: none;
 }
- 
+
 li a {
   text-decoration: none;
   color: #ccc;
   font: 15px/1 Helvetica, Verdana, sans-serif;
   text-transform: uppercase;
- 
+
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
- 
+
 li a:hover {
   color: #666;
 }
@@ -275,7 +259,7 @@ li.active a {
 			<div class="row">
 				<div class="col-md-12">
 					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#fh5co-navbar" aria-expanded="false" aria-controls="navbar"><span>Menu</span> <i></i></a>
-					<a href="index1.html" class="navbar-brand" style="color:#298A08;font-size: 25px;"><span style=" color:greenyellow">सुदूर</span></a>
+					<a href="index.html" class="navbar-brand" style="color:#298A08;font-size: 25px;"><span style=" color:greenyellow">सुदूर</span></a>
 				</div>
 			</div>
 		</div>
@@ -288,7 +272,7 @@ li.active a {
 				<div class="fh5co-intro">
 					<div class="container">
 						<div class="row">
-							
+
 							<div class="col-md-6 fh5co-text">
 								<h2 class="to-animate intro-animate-1"> क्यों जाऐं दूर, </h2>
 								<h2 class="to-animate intro-animate-1">जब पास है <a style="color: greenyellow">सुदूर</a></h2>
@@ -303,15 +287,15 @@ li.active a {
 	<form class="Form" role="form" data-posturl="" novalidate="" data-language="es">
 		<div class="vertical-registration-form mc-form-wrap">
 			<div class="colored-line"></div>
-			<h3><b> ORDER NOW </b></h3>			
-			<input name="NAME" class="form-control input-box" placeholder="Name" type="text"><br>
+			<h3><b> ORDER NOW </b></h3>
+			<input id="name" name="name" class="form-control input-box" placeholder="Name" type="text"><br>
 			<!--<input name="LASTNAME" class="form-control input-box" placeholder="Surname" type="text"><br>-->
-			<input name="PHONE NO" class="form-control input-box" placeholder="PhoneNumber" type="text"><br>
-			<input name="Quantity" class="form-control input-box" placeholder="quantity" type="text"><br>
-			<input name="Address" class="form-control input-box" placeholder="Enter your Address" type="text"><br>	
+			<input id="phone" name="phone" class="form-control input-box" placeholder="PhoneNumber" type="text"><br>
+			<input id="enquiry" name="enquiry" class="form-control input-box" placeholder="Enquiry" type="text"><br>
+			<input id="address" name="address" class="form-control input-box" placeholder="Enter your Address" type="text"><br>
 			<h6 class="subscription-success"></h6>
 			<h6 class="subscription-error"></h6>
-		  <input value="Order Now" class="btn standard-button" type="submit" onClick="parent.location='mailto:yatish.mhs@gmail.com?subject=mail for sudoor enquiry&cc=you2@youremail.com'">
+		  <btn class="btn standard-button" onclick="submit()">submit</btn>
 		</div>
 	</form>
 </div></div>
@@ -321,7 +305,7 @@ li.active a {
 							</div>
 
 						</div>
-					</div>						
+					</div>
 				</div>
 			</header>
 			<!-- END .header -->
@@ -368,26 +352,6 @@ li.active a {
 									<p class="fh5co-feature-text">सभी MK1डेल्टा, स्टार डेल्टा व डीओएल स्टार्टर के लिए</p>
 								</a>
 							</div>
-
-							<!--<div class="clearfix visible-sm-block"></div>
-
-							<div class="fh5co-spacer fh5co-spacer-sm"></div>
-
-							<div class="col-md-4 col-md-offset-4 text-center to-animate">
-								<a id="myst" onclick="show();" class="btn btn-primary">सभी सुविधाएं देखें</a>
-								<script>
-									var showBtn = document.getElementById('myst');
-									showBtn.onclick = function() {
-								var showme = document.getElementById('mydiv');
-								if (showme.style.display !== 'block') {
-								showme.style.display = 'block';
-								}
-								else {
-								showme.style.display = 'none';
-								} };
-								</script>
-
-							</div>-->
 			        	</div>
 						  <div id="mydiv" class="row">
 							  <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
@@ -422,9 +386,9 @@ li.active a {
 			       </div>
 			       </div>
 				   </div>
-				   
+
 				   <!--applications container -->
-				
+
 				<div id="fh5co-features-2" data-section="benefits">
 					<div class="fh5co-features-2-content">
 					    <div class="container">
@@ -445,7 +409,7 @@ li.active a {
 											<h4 class="fh5co-uppercase-sm">1 वर्ष की वारंटी</h4>
 											<p>सुदूर बहुउद्देश्यीय उपयोग के लिए एक उपयुक्त उपकरण है तथा 1 वर्ष की रिप्लेसमेंट वारंटी के साथ उपलब्ध है ।</p>
 										</div>
-										
+
 									</div>
 					    		</div>
 					    		<div class="col-md-4 col-md-push-4 fh5co-text-wrap">
@@ -460,7 +424,7 @@ li.active a {
 											<h4 class="fh5co-uppercase-sm">आसानी से नंबर रजिस्टर</h4>
 											<p>अब अपने मोबाइल नंबर को सुदूर  पर आसानी से रजिस्टर करें। सुदूर के साथ किसी भी ऑपरेटर की जीएसएम सिम कार्ड का उपयोग किया जा सकता है। </p>
 										</div>
-										
+
 									</div>
 					    		</div>
 					    		<div class="col-md-4 col-md-pull-4 fh5co-image animate-object features-2-animate-2">
@@ -468,131 +432,57 @@ li.active a {
 					    			<img src="images/iphone_blank_2.png" class="" alt="Outline Free HTML5 Responsive Bootstrap Template">
 					    			</p>
 					    		</div>
-					    		
+
 					    	</div>
 					    </div>
-					</div>	
+					</div>
                  </div>
+			    				 <div id="fh5co-counter" data-section="counter" class="fh5co-bg-section" style="background: url(images/bg_1.jpg) fixed;"style="padding:0px">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="fh5co-hero-wrap col-md-8 col-md-offset-2 fh5co-section-heading text-center">
+									<h2 style="color:white">Downloads</h2>
+									<div class="fh5co-hero-intro text-center to-animate counter-animate">
+										<div class="col-md-4 col-md-push-4 fh5co-text-wrap" style="padding-top: 10px;padding-bottom: 0px;margin-bottom: 0px;">
+											<div class="row text-center">
+												<div class="col-md-12 col-sm-6 col-xs-6 col-xxs-12 fh5co-text animate-object features-2-animate-5">
+											<div class="btn btn-default">Pamphlet</div>
+											<div class="btn btn-default">User Manual</div>
+										</div>
+											</div></div></div></div>
+							</div>
+						</div>
+					</div></div>
 
 
-			    <!-- <div id="fh5co-testimony" data-section="testimonies">
-				    <div class="container">
-				    	<div class="row animate-box">
-
-							<div class="owl-carousel">
-
-								<div class="item">
-									<div class="col-md-3 col-sm-3 col-xs-4 col-xxs-12">
-						    			<figure class="fh5co-vcard"><img src="images/sanju.png" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive"></figure>
-						    		</div>
-						    		<div class="col-md-9 col-sm-9 col-xs-8 col-xxs-12">
-						    			<blockquote>
-						    				<p>&ldquo;Yeh product humne kisan bhaiyo ko dhyaan mai rakh kar banaya hai.&rdquo;</p>
-						    			</blockquote>
-						    			<p class="fh5co-author fh5co-uppercase-sm"><span>Sanju Kumar</span>, AE Inc.</p>
-						    		</div>
-						    	</div>
-
-						    	<div class="item">
-									<div class="col-md-3 col-sm-3 col-xs-4 col-xxs-12">
-						    			<figure class="fh5co-vcard"><img src="images/yatish.png" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive"></figure>
-						    		</div>
-						    		<div class="col-md-9 col-sm-9 col-xs-8 col-xxs-12">
-						    			<blockquote>
-						    				<p>&ldquo;Kisan is product ko bahut hi pasand karenge, yeh humara wada hai.&rdquo;</p>
-						    			</blockquote>
-						    			<p class="fh5co-author fh5co-uppercase-sm"><span>Yatish Khare</span>, AE Inc.</p>
-						    		</div>
-						    	</div>
-
-						    	<div class="item">
-									<div class="col-md-3 col-sm-3 col-xs-4 col-xxs-12">
-						    			<figure class="fh5co-vcard"><img src="images/ankit.png" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive"></figure>
-						    		</div>
-						    		<div class="col-md-9 col-sm-9 col-xs-8 col-xxs-12">
-						    			<blockquote>
-						    				<p>&ldquo;Humne yeh product banane mai bahutpurv yogdan diya hai, aur humne ek sudoor khareeda bhi hai. Jo humari paani ki tanki mai paani chadata hai.&rdquo;</p>
-						    			</blockquote>
-						    			<p class="fh5co-author fh5co-uppercase-sm"><span>Ankit Singh</span>, UIT-RGPV Intern.</p>
-						    		</div>
-						    	</div>
-
-
-						    </div>
-
-				    	</div>
-				    </div>
-			    </div> -->
-
-			    
-				 <div id="fh5co-counter" data-section="counter" class="fh5co-bg-section" style="background-image: url(images/bg_1.jpg); background-attachment: fixed;">
-					<div class="fh5co-overlay"></div>
+				<div class="fh5co-bg-section cta" id="fh5co-cta" style="background-image: url(images/hero_bg.jpg); background-attachment: fixed;">
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
 								<div class="fh5co-hero-wrap">
-									<h2 style="color:white">Downloads</h2>
-									<div class="fh5co-hero-intro text-center to-animate counter-animate">
-										<div class="col-md-4 text-center">
-											<div class="btn btn-default">Pamphlet</div>
-											
-										</div>
-										<div class="col-md-4 text-center">
-											<div class="btn btn-default">User Manual</div>
-										</div>
-										</div>
+											<div class="col-md-8 col-md-offset-2 fh5co-section-heading text-center">
+												<h2 class="fh5co-lead to-animate">सुदूर का डेमो !</h2>
+												<p class="fh5co-sub to-animate">निम्न स्थानों पर सुदूर का डेमो देखें</p>
+												<p class="fh5co-sub to-animate"><a href="https://goo.gl/maps/trem77anwVx" target="_blank">Advancia Electric Office: +91-7554083374</a></p>
+												<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1PoCb4Lf0MxU5wg1q0W5zIPf0Iuc"height="100%"width="100%"></iframe>
+											</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				
-				<div class="fh5co-bg-section cta" id="fh5co-cta" style="background-image: url(images/hero_bg.jpg); background-attachment: fixed;">
-					<div class="fh5co-overlay"></div>
-					<div class="container">
-						<div class="row">
-							<div class="col-md-12">
-								<div class="fh5co-hero-wrap">
-									<div class="fh5co-hero-intro text-center">
-										<div class="row">
-											<div class="col-md-8 col-md-offset-2 fh5co-section-heading text-center">
-												<h2 class="fh5co-lead to-animate">सुदूर का डेमो !</h2>
-												<p class="fh5co-sub to-animate">निम्न स्थानों पर सुदूर का डेमो देखें</p>
-												<!--<div class="to-animate"><a href="#" class="btn btn-primary">Get Started!</a></div>-->
-												<p class="fh5co-sub to-animate"><a href="https://goo.gl/maps/trem77anwVx" target="_blank">Advancia Electric Office: +91-8109307377</a></p>
-												<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1PoCb4Lf0MxU5wg1q0W5zIPf0Iuc" width="640" height="480"></iframe>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>					
-					</div>
-				</div>
-				
 				<div id="fh5co-pricing" data-section="pricing">
 					<div class="container">
 						<div class="row">
 							<div class="col-md-8 col-md-offset-2 fh5co-section-heading text-center">
-								<h2 class="fh5co-lead animate-single pricing-animate-1">सुदुर पर भारी छूट</h2>
+								<h2 class="fh5co-lead animate-single pricing-animate-1"></h2>
 								<p class="fh5co-sub animate-single pricing-animate-2"> डिस्काउंट की जानकारी  एवं सुदूर ऑर्डर करने  के लिए   +91-8989450788  पर हमसे संपर्क करें।</p>
 							</div>
 
 							<div class="col-md-3 to-animate">
-								<!-- <a href="#" class="fh5co-figure">
-									<span class="fh5co-price">₹4200<span>/piece</span></span>
-									<h3 class="fh5co-figure-lead">Individuals</h3>
-									<p class="fh5co-figure-text">Buy Sudoor online or find retailer near you</p>
-								</a> -->
-							</div>
-							<div class="col-md-3 to-animate">
-								<a href="#popup1" class="fh5co-figure active pricing-feature">
-									<span class="fh5co-price">₹4200<span> </span></span>
-									<h3 class="fh5co-figure-lead">विशेष छूट </h3>
-									<p class="fh5co-figure-text"> </p>
-								</a>
-							</div>
+								</div>
 							<div class="col-md-3 to-animate">
 								<a href="#popup1" class="fh5co-figure active pricing-feature">
 									<span class="fh5co-price">₹4500<span></span></span>
@@ -601,7 +491,7 @@ li.active a {
 								</a>
 							</div>
 							<div class="col-md-3 to-animate">
-								<!-- <a href="#" class="fh5co-figure">
+								 <!--<a href="#" class="fh5co-figure">
 									<span class="fh5co-price">Retailers<span>/month</span></span>
 									<h3 class="fh5co-figure-lead">Enterprise</h3>
 									<p class="fh5co-figure-text">Contact us at +91-8109307377</p>
@@ -614,17 +504,17 @@ li.active a {
 				<!-- ///////////////////////////////////
 				This section had FAQs
 				////////////////////////////////////////-->
-				
+
 				<div id="fh5co-faqs"  data-section="faqs">
 					<div class="container">
 						<div class="row">
 							<div class="col-md-8 col-md-offset-2 fh5co-section-heading text-center">
-								<h2 class="fh5co-lead animate-single faqs-animate-1">सामान्य पूछे जाने वाले प्रश्न  </h2>
+								<h3 class="fh5co-lead animate-single faqs-animate-1">सामान्य पूछे जाने वाले प्रश्न  </h3>
 								<!--<p class="fh5co-sub animate-single faqs-animate-2">Far far away, behind the word mountains, far from the countries Vokalia and</p>-->
 							</div>
 						</div>
 					</div>
-					
+
 
 					<div class="container">
 						<div class="faq-accordion active to-animate">
@@ -757,19 +647,19 @@ li.active a {
 							<div class="popup" style=" margin-top: 95px;">
 								<a class="close" href="#">&times;</a>
 								<div class="content">
-									<form class="Form" role="form" data-posturl="" novalidate="" data-language="es">
+									<form class="Form"  role="form" data-posturl="" novalidate="" method="post" data-language="es">
 										<div class="vertical-registration-form mc-form-wrap">
 											<div class="colored-line"></div>
 											<h3><b> FEEDBACK FORM </b></h3>
 											<input name="NAME" class="form-control input-box" placeholder="Name" type="text"><br>
 											<!--<input name="LASTNAME" class="form-control input-box" placeholder="Surname" type="text"><br>-->
-											<input name="PHONE NO" class="form-control input-box" placeholder="PhoneNumber" type="text"><br>
+											<input name="PHONE_NO" class="form-control input-box" placeholder="PhoneNumber" type="text"><br>
 											<!--<input name="Quantity" class="form-control input-box" placeholder="quantity" type="text"><br>-->
 											<input name="Address" class="form-control input-box" placeholder="Enter your Address" type="text"><br>
 											<input name="Feedback" class="form-control input-box" placeholder="Feedback" type="text"><br>
 											<h6 class="subscription-success"></h6>
 											<h6 class="subscription-error"></h6>
-											<input value="ENTER" class="btn standard-button" type="submit" onClick="parent.location='mailto:yatish.mhs@gmail.com?subject=mail for sudoor enquiry&cc=you2@youremail.com'">
+											<input value="submit" class="btn standard-button" type="submit" onClick="parent.location='mailto:yatish.mhs@gmail.com?subject=mail for sudoor enquiry&cc=you2@youremail.com'">
 										</div>
 									</form>
 								</div></div>
@@ -786,7 +676,7 @@ li.active a {
 								<a href="#"><i class="icon-youtube"></i></a> -->
 							</p>
 						</div>
-						
+
 					</div>
 				</div>
 			</div>
@@ -826,10 +716,27 @@ li.active a {
             $("#popupBox").removeClass("show");
             $("body").removeClass("hide_sb")
         });
+
+				function submit() {
+					var data = {}
+					data.name = document.getElementById('name').value
+					data.phone = document.getElementById('phone').value
+					data.enquiry = document.getElementById('enquiry').value
+					data.address = document.getElementById('address').value
+					console.log(data);
+					var xhr = new XMLHttpRequest()
+					xhr.open('POST',"http://sudoor.in/enquiry", true)
+					xhr.onreadystatechange = function () {
+						if (xhr.status === 200 && xhr.readyState === 4) {
+							console.log(true)
+						}
+					}
+					xhr.send(JSON.stringify(data))
+				}
 	</script>>
 
-	
 
-	
+
+
 	</body>
 </html>
